@@ -17,9 +17,15 @@ class ContactsViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.setupTableView()
     }
 
+	private func setupTableView() {
+		self.cellConfigurator.register(tableView: tableView)
+		self.tableView.delegate = self
+		self.tableView.dataSource = self
+	}
+	
 }
 
 extension ContactsViewController: UITableViewDelegate {
