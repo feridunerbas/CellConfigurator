@@ -27,33 +27,3 @@ class ContactsViewController: UIViewController {
 	}
 	
 }
-
-extension ContactsViewController: UITableViewDelegate {
-	
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		let cellViewModel = viewModel.cellViewModel(at: indexPath)
-		return cellConfigurator.lookUp(cellViewModel: cellViewModel).calculateHeight(for: tableView.bounds, cellViewModel: cellViewModel)
-	}
-	
-	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-		let cellViewModel = viewModel.cellViewModel(at: indexPath)
-		return cellConfigurator.lookUp(cellViewModel: cellViewModel).estimateHeight(for: tableView.bounds, cellViewModel: cellViewModel)
-		
-	}
-}
-
-extension ContactsViewController: UITableViewDataSource {
-	
-	func numberOfSections(in tableView: UITableView) -> Int {
-		return viewModel.numberOfSections
-	}
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.numberOfRows(in: section)
-	}
-	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return self.cellConfigurator.configure(tableView: tableView, indexPath: indexPath, cellViewModel: viewModel.cellViewModel(at: indexPath))
-	}
-	
-}
