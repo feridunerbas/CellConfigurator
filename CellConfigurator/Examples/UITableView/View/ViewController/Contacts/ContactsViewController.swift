@@ -18,7 +18,14 @@ class ContactsViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.setupTableView()
+		self.subscribeViewModel()
     }
+	
+	private func subscribeViewModel() {
+		self.viewModel.reloadTable = { [weak self] in
+			self?.tableView.reloadData()
+		}
+	}
 
 	private func setupTableView() {
 		self.cellConfigurator.register(tableView: tableView)
