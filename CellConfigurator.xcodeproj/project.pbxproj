@@ -21,6 +21,9 @@
 		86A56A8724BE5F64004DF640 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A8624BE5F64004DF640 /* Contact.swift */; };
 		86A56A8C24BE5FA4004DF640 /* ContactsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A8B24BE5FA4004DF640 /* ContactsSection.swift */; };
 		86A56A8E24BE5FD6004DF640 /* ContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A8D24BE5FD6004DF640 /* ContactCellViewModel.swift */; };
+		86A56A9B24BE6378004DF640 /* UITableViewCellHeightCalculating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A9824BE6378004DF640 /* UITableViewCellHeightCalculating.swift */; };
+		86A56A9C24BE6378004DF640 /* UITableViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A9924BE6378004DF640 /* UITableViewCellConfigurator.swift */; };
+		86A56A9D24BE6378004DF640 /* UITableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A56A9A24BE6378004DF640 /* UITableViewCellConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		86A56A8624BE5F64004DF640 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		86A56A8B24BE5FA4004DF640 /* ContactsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSection.swift; sourceTree = "<group>"; };
 		86A56A8D24BE5FD6004DF640 /* ContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellViewModel.swift; sourceTree = "<group>"; };
+		86A56A9824BE6378004DF640 /* UITableViewCellHeightCalculating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellHeightCalculating.swift; sourceTree = "<group>"; };
+		86A56A9924BE6378004DF640 /* UITableViewCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfigurator.swift; sourceTree = "<group>"; };
+		86A56A9A24BE6378004DF640 /* UITableViewCellConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		86A56A7424BE5CE2004DF640 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				86A56A9024BE6170004DF640 /* Configurators */,
 				86A56A7624BE5D0E004DF640 /* Model */,
 				86A56A7524BE5CF5004DF640 /* ViewModel */,
 			);
@@ -190,6 +197,24 @@
 				86A56A8B24BE5FA4004DF640 /* ContactsSection.swift */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		86A56A9024BE6170004DF640 /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				86A56A9724BE635D004DF640 /* UITableView */,
+			);
+			path = Configurators;
+			sourceTree = "<group>";
+		};
+		86A56A9724BE635D004DF640 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				86A56A9824BE6378004DF640 /* UITableViewCellHeightCalculating.swift */,
+				86A56A9924BE6378004DF640 /* UITableViewCellConfigurator.swift */,
+				86A56A9A24BE6378004DF640 /* UITableViewCellConfigurable.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,13 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A56A9B24BE6378004DF640 /* UITableViewCellHeightCalculating.swift in Sources */,
 				86A56A7B24BE5D68004DF640 /* TableSourceViewModel.swift in Sources */,
 				86A56A7D24BE5D83004DF640 /* TableSection.swift in Sources */,
 				86A56A4B24BE572D004DF640 /* AppDelegate.swift in Sources */,
+				86A56A9D24BE6378004DF640 /* UITableViewCellConfigurable.swift in Sources */,
 				86A56A8424BE5EA8004DF640 /* ContactsViewModel.swift in Sources */,
 				86A56A8724BE5F64004DF640 /* Contact.swift in Sources */,
 				86A56A4D24BE572D004DF640 /* SceneDelegate.swift in Sources */,
 				86A56A8124BE5E19004DF640 /* TableCellViewModel.swift in Sources */,
+				86A56A9C24BE6378004DF640 /* UITableViewCellConfigurator.swift in Sources */,
 				86A56A7224BE5B74004DF640 /* ContactsViewController.swift in Sources */,
 				86A56A8C24BE5FA4004DF640 /* ContactsSection.swift in Sources */,
 				86A56A8E24BE5FD6004DF640 /* ContactCellViewModel.swift in Sources */,
