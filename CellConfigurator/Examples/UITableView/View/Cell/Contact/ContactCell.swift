@@ -22,6 +22,8 @@ class ContactCell: UITableViewCell {
 
 	override func configure(with: Any?) {
 		self.viewModel = with as? ContactCellViewModel
+		self.nameLabel.text = viewModel?.name
+		self.phoneLabel.text = viewModel?.phone
 	}
 	
 	override static func estimateHeight(for bounds: CGRect, cellViewModel: Any?) -> CGFloat {
