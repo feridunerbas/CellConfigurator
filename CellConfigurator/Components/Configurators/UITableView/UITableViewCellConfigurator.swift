@@ -15,7 +15,7 @@ protocol UITableViewCellConfigurator {
 
 extension UITableViewCellConfigurator {
 	
-    func resolve(tableView: UITableView, indexPath: IndexPath, cellViewModel: TableCellViewModel) -> UITableViewCell {
+    func configure(tableView: UITableView, indexPath: IndexPath, cellViewModel: TableCellViewModel) -> UITableViewCell {
         let type = lookUp(cellViewModel: cellViewModel)
         let id = String(describing: type.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: id, for: indexPath)

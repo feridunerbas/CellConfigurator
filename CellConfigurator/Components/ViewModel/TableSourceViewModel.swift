@@ -27,7 +27,7 @@ extension TableSourceViewModel {
         return sections.count
     }
 
-    func cellViewModel(at indexPath: IndexPath) -> Any {
+    func cellViewModel(at indexPath: IndexPath) -> TableCellViewModel {
         return sections[indexPath.section].cellViewModels[indexPath.row]
     }
 	

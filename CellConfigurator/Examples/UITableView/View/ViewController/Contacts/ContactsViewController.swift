@@ -12,10 +12,32 @@ class ContactsViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	
+	var viewModel: ContactsViewModel = ContactsViewModelImplementation()
+	var cellConfigurator: ContactsCellConfigurator = ContactsCellConfiguratorImplementation()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+}
 
+extension ContactsViewController: UITableViewDelegate {
+	
+}
+
+extension ContactsViewController: UITableViewDataSource {
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return viewModel.numberOfSections
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return viewModel.numberOfRows(in: section)
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		return self.cellConfigurator.configure(tableView: tableView, indexPath: indexPath, cellViewModel: viewModel.cellViewModel(at: indexPath))
+	}
+	
 }
