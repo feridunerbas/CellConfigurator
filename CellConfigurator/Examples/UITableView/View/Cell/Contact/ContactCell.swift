@@ -20,8 +20,8 @@ class ContactCell: UITableViewCell {
         
     }
 
-	override func configure(with: Any?) {
-		self.viewModel = with as? ContactCellViewModel
+	override func configure(with cellViewModel: Any?) {
+		self.viewModel = cellViewModel as? ContactCellViewModel
 		self.nameLabel.text = viewModel?.name
 		self.phoneLabel.text = viewModel?.phone
 	}

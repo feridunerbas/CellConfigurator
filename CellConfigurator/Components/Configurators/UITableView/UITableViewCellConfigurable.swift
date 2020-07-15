@@ -9,11 +9,11 @@
 import UIKit
 
 protocol UITableViewCellConfigurable: class {
-    func configure(with: Any?)
+	func configure(with cellViewModel: Any?)
 }
 
 extension UITableViewCell: UITableViewCellConfigurable {
 	
-	@objc func configure(with _: Any?) {}
+	@objc func configure(with cellViewModel: Any?) {}
 	
 }
